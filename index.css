@@ -52,8 +52,8 @@ img {
     justify-content: center;
     align-items: center;
     width: min(80%, 40em);
-    height: 90vh;
-    margin: 2em;
+    min-height: 100vh;
+    padding: 2em;
 }
 
 header {
@@ -61,6 +61,7 @@ header {
     width: 40%;
     max-width: 14em;
 }
+
 
 .text {
     text-align: center;
@@ -123,10 +124,11 @@ button:hover {
 
     .container {
         width: 90%;
+        display: grid;
+        
     }
 
     main {
-        justify-self: end;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         column-gap: 2em;
@@ -136,8 +138,13 @@ button:hover {
         justify-self: center;
         max-width: 50ch;
         text-align: left;
-
+        font-size: clamp(.95rem, 1.2vw ,1.3rem);
     } 
+
+    .text h1 {
+        max-width: 12em;
+        font-size: clamp(1.4rem, 3vw, 2.2rem)
+    }
 
     .social {
         align-self: end;
