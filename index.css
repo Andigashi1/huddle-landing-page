@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root {
+
+    /* colors */
+
+    --violet-clr: hsl(257, 40%, 49%);
+    --soft-magenta-clr: hsl(300, 69%, 71%);
+
+    /* typography */
+
+    --headings-ff: 'Poppins', sans-serif;
+    --body-ff: 'Open Sans', sans-serif;
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+    justify-content: center;
+    align-items: center;
+    background: url(images/bg-mobile.svg) no-repeat var(--violet-clr);
+    background-size: cover;
+    color: white;
+    font-family: var(--body-ff);
+    line-height: 1.6;
+}
+
+h1, h2 {
+    
+    font-family: var(--headings-ff);
+    font-size: 1.8rem;
+    line-height: 1.4;
+}
+
+img {
+    width: 100%;
+    margin-bottom: 2em;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: min(80%, 40em);
+    height: 90vh;
+    margin: 2em;
+}
+
+header {
+    align-self: start;
+    width: 40%;
+    max-width: 14em;
+}
+
+.text {
+    text-align: center;
+}
+
+.text h1 {
+    margin-bottom: .8em;
+}
+
+.text {
+    margin-bottom: .8em;
+}
+
+button {
+    margin-top: 2em;
+    background-color: white;
+    border: 0;
+    border-radius: 30px;
+    padding: 1em 5em;
+    color: var(--violet-clr);
+    font-size: inherit;
+}
+
+button:hover {
+    background-color: var(--soft-magenta-clr);
+    color: white;
+}
+
+.social {
+    justify-self: end;
+    text-align: center;
+    margin: auto 0 1em;
+}
+
+.icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon * {
+    margin-inline: .6em;
+
+}
+
+.fa-brands {
+    color: white
+}
+
+.fa-brands:hover{
+    color: var(--soft-magenta-clr);
+}
+
+@media (min-width:50em){
+
+    body {
+        background-image: url(images/bg-desktop.svg);
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    main {
+        justify-self: end;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2em;
+    }
+
+    .text {
+        justify-self: center;
+        max-width: 50ch;
+        text-align: left;
+
+    } 
+
+    .social {
+        align-self: end;
+    }
+    
+}
