@@ -38,7 +38,6 @@ body {
 h1, h2 {
     
     font-family: var(--headings-ff);
-    font-size: 1.8rem;
     line-height: 1.4;
 }
 
@@ -69,6 +68,7 @@ header {
 
 .text h1 {
     margin-bottom: .8em;
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
 }
 
 .text {
