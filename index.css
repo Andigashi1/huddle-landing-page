@@ -63,6 +63,7 @@ header {
 
 
 .text {
+    align-self: center;
     text-align: center;
 }
 
